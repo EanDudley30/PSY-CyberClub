@@ -33,10 +33,57 @@ local = true
     type = "AutoCheckUpdatesEnabled"
 
 [[check]]
+    message = "ClamAV Antivirus is Running As a Service"
+    points = 5 
+    [[check.pass]] 
+    type = "ServiceUp"
+    name = "clamd"
+
+[[check]]
     message = "Firewall is Running" 
     points = 4 
     [[check.pass]]
     type = "FirewallUp"
+
+[[check]]
+    messsage = "Password Retry Set to Appropriate Range"
+    points = 2 
+    [[check.pass]]
+    type = "FileContains" 
+    path = "/etc/pam.d/common-auth"
+    value = "deny=3"
+    [[check.passoverride]] 
+    type = "FileContains"
+    path = "/etc/pam.d/common-auth"
+    value = "deny=4"
+    [[check.passoverride]] 
+    type = "FileContains"
+    path = "/etc/pam.d/common-auth"
+    value = "deny=5" 
+
+[[check]]
+    message = "Password Minimum Length Set to Approriate Range" 
+    points = 2 
+    [[check.pass]]
+    type = "FileContains" 
+    path = "/etc/pam.d/common-password"
+    value = "minlen=10" 
+    [[check.passoverride]] 
+    type = "FileContains" 
+    path = "/etc/pam.d/common-password" 
+    value = "minlen=11" 
+    [[check.passoverride]] 
+    type = "FileContains" 
+    path = "/etc/pam.d/common-password"
+    value = "minlen=12" 
+
+[[check]]
+    message = "Password Expiration Date Set to Appropriate Range" 
+    points = 2 
+    [[check.pass]] 
+    type = "FileContains" 
+    path = "/etc/login.defs" 
+    value = "PASS_MAX_DAYS=60" 
 
 [[check]]
     message = "/etc/shadow is Not World Readable"
@@ -48,6 +95,34 @@ local = true
     type = 'PermissionIs'
     path = '/etc/shadow'
     value = 'rw-r-----'
+
+[[check]] 
+    message = "Guest Account Disabled" 
+    points = 3
+    [[check.pass]] 
+    type = "GuestDisabledLDM"
+
+[[check]] 
+    message = "Removed Insecure Sudoers Rule" 
+    points = 6 
+    [[check.pass]]
+    type = "FileContainsNot"
+    path = "/etc/sudoers"
+    value = "NOPASSWD"
+
+[[check]]
+    message = "AuditD is Running" 
+    points = 4
+    [[check.pass]]
+    type = 'ServiceUp' 
+    name = 'auditd'
+
+[[check]] 
+    message = "Removed Unauthorized OpenSSH"
+    points = 4
+    [[check.pass]] 
+    type = "ProgramNotInstalled"
+    name = "openssh-server" 
 
 [[check]] 
     message = "Unauthorized user Gethin Burch Removed" 
@@ -78,3 +153,63 @@ local = true
     type = "PasswordChanged"
     user = "calmort" 
     value = "
+
+[[check]] 
+    message = "Policy Violation: EtterCap Removed"
+    points = 3 
+    [[check.pass]]
+    type = "ProgramNotInstalled" 
+    name = "ettercap" 
+
+[[check]]
+    message = "Apache Does Not Expose Server Signature" 
+    points = 4 
+    [[check.pass]]
+    type = "FileContains"
+    path = "/etc/apache2/conf-enabled/security.conf"
+    value = "ServerSignature off"
+
+[[check]] 
+    message = "Apache Does Not Expose Server In Headers"
+    points = 4 
+    [[check.pass]]
+    type = "FileContains" 
+    path = "/etc/apache2/conf-enabled/security.conf" 
+    value = "ServerTokens prod"
+
+[[check]]
+    message = "PHP Does Not Expose Version"
+    points = 4
+    [[check.pass]]
+    type = "FileContains" 
+    path = "/etc/php/7.0/apache2/php.ini"
+    value = "expose_php = off" 
+
+[[check]]
+    message = "PHP Does not allow remote code execution"
+    points = 4 
+    [[check.pass]] 
+    type = "FileContains" 
+    path = "/etc/php/7.0/apache2/php.ini"
+    value = "allow_url_f_open = off"
+
+[[check]] 
+    message = "PHP Backdoor Has Been Removed" 
+    points = 3 
+    type = "PathExistsNot"
+    path = "/var/www/html/index.php"
+
+[[check]] 
+    message = "Policy Violation Sensitive Information Removed"
+    points = 2 
+    [[check.pass]]
+    type = PathExistsNot" 
+    path = "/home/robsull/Downloads/10-MB-Test.xlsx"
+
+[[check]]
+    message = "Forensics Question 1 Answered" 
+    points = 5 
+    [[check.pass]] 
+    type = FileContains
+    path = "/home/robsull/Desktop/Forensics Question 1.odt"
+    value = "Port: 80"
