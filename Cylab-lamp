@@ -18,13 +18,6 @@ version = "2.0.0" # The version of aeacus you're using
 # regardless of whether or not remote scoring is working
 local = true
 
-[[check]]
-    message = "Bash Upgraded Sucessfully"
-    points = 5
-    [[check.pass]] 
-    type = "ProgramVersionNot"
-    name = "bash"
-    value = "4.3-14ubutnu1.4"
 
 [[check]] 
     message = "Automatic Updates Enabled" 
@@ -121,7 +114,7 @@ local = true
     message = "Removed Unauthorized OpenSSH"
     points = 4
     [[check.pass]] 
-    type = "ProgramNotInstalled"
+    type = "ProgramInstalledNot"
     name = "openssh-server" 
 
 [[check]] 
@@ -158,8 +151,8 @@ local = true
     message = "Policy Violation: EtterCap Removed"
     points = 3 
     [[check.pass]]
-    type = "ProgramNotInstalled" 
-    name = "ettercap" 
+    type = "ProgramInstalledNot" 
+    name = "ettercap-common" 
 
 [[check]]
     message = "Apache Does Not Expose Server Signature" 
@@ -213,3 +206,68 @@ local = true
     type = FileContains
     path = "/home/robsull/Desktop/Forensics Question 1.odt"
     value = "Port: 80"
+
+
+#Penalties 
+[[check]] 
+    message = "Administrator Has Been Removed" 
+    points = -5 
+    [[check.pass]]
+    type = "UserExistsNot" 
+    value = "robsull"
+
+[[check]]
+    message = "Administrator Has Been Removed"
+    points = -5 
+    [[check.pass]] 
+    type = "UserExistsNot" 
+    value = "morgvill"
+
+[[check]] 
+    message = "Administrator Has Been Removed" 
+    points = -5 
+    [[check.pass]]
+    type = "UserExistsNot" 
+    value = "calmort" 
+
+[[check]] 
+    message = "User Has Been Removed" 
+    points = -5 
+    [[check.pass]]
+    type = "UserExistsNot"
+    value = "alamwelc"
+
+[[check]] 
+    message = "User Has Been Removed" 
+    points = -5 
+    [[check.pass]]
+    type = "UserExistsNot"
+    value = "shaali"
+
+[[check]] 
+    message = "User Has Been Removed" 
+    points = -5 
+    [[check.pass]]
+    type = "UserExistsNot"
+    value = "rosaray"
+
+[[check]] 
+    message = "User Has Been Removed" 
+    points = -5 
+    [[check.pass]]
+    type = "UserExistsNot"
+    value = "peneskin"
+
+[[check]] 
+    message = "User Has Been Removed" 
+    points = -5 
+    [[check.pass]]
+    type = "UserExistsNot"
+    value = "marisan"
+
+[[check]]
+    message = "Forensics Question Deleted" 
+    points -5
+    [[check.pass]]
+    type = "PathExistsNot"
+    path = "/home/robsull/Desktop/Forensics Question 1.odt" 
