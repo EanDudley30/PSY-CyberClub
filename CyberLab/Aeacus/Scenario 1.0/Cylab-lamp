@@ -145,7 +145,7 @@ local = true
     [[check.pass]] 
     type = "PasswordChanged"
     user = "calmort" 
-    value = "
+    value = "$6$m7sDDFgghZsK5zjt$e4t5lyUMCSQ9UdiBVKJ/cct4Rwxxi6arew.B4uUIoJdoZtCs3biBv.BjOWAoMDDxFx05ch4YCjvPXBSrU98ua1"
 
 [[check]] 
     message = "Policy Violation: EtterCap Removed"
@@ -196,14 +196,14 @@ local = true
     message = "Policy Violation Sensitive Information Removed"
     points = 2 
     [[check.pass]]
-    type = PathExistsNot" 
+    type = "PathExistsNot" 
     path = "/home/robsull/Downloads/10-MB-Test.xlsx"
 
 [[check]]
     message = "Forensics Question 1 Answered" 
     points = 5 
     [[check.pass]] 
-    type = FileContains
+    type = "FileContains"
     path = "/home/robsull/Desktop/Forensics Question 1.odt"
     value = "Port: 80"
 
@@ -267,7 +267,7 @@ local = true
 
 [[check]]
     message = "Forensics Question Deleted" 
-    points -5
+    points = -5
     [[check.pass]]
     type = "PathExistsNot"
     path = "/home/robsull/Desktop/Forensics Question 1.odt" 
