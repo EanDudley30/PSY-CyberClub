@@ -30,7 +30,7 @@ local = true
     points = 5 
     [[check.pass]] 
     type = "ServiceUp"
-    name = "clamd"
+    name = "clamav-daemon.service"
 
 [[check]]
     message = "Firewall is Running" 
@@ -69,6 +69,10 @@ local = true
     type = "FileContains" 
     path = "/etc/pam.d/common-password"
     value = "minlen=12" 
+    [[check.passoverride]]
+    type = "FileContains"
+    path = "/etc/security/pwquality.conf"
+    value = "minlen=10"
 
 [[check]]
     message = "Password Expiration Date Set to Appropriate Range" 
@@ -214,56 +218,56 @@ local = true
     points = -5 
     [[check.pass]]
     type = "UserExistsNot" 
-    value = "robsull"
+    user = "robsull"
 
 [[check]]
     message = "Administrator Has Been Removed"
     points = -5 
     [[check.pass]] 
     type = "UserExistsNot" 
-    value = "morgvill"
+    user = "morgvill"
 
 [[check]] 
     message = "Administrator Has Been Removed" 
     points = -5 
     [[check.pass]]
     type = "UserExistsNot" 
-    value = "calmort" 
+    user = "calmort" 
 
 [[check]] 
     message = "User Has Been Removed" 
     points = -5 
     [[check.pass]]
     type = "UserExistsNot"
-    value = "alamwelc"
+    user = "alamwelc"
 
 [[check]] 
     message = "User Has Been Removed" 
     points = -5 
     [[check.pass]]
     type = "UserExistsNot"
-    value = "shaali"
+    user = "shaali"
 
 [[check]] 
     message = "User Has Been Removed" 
     points = -5 
     [[check.pass]]
     type = "UserExistsNot"
-    value = "rosaray"
+    user = "rosaray"
 
 [[check]] 
     message = "User Has Been Removed" 
     points = -5 
     [[check.pass]]
     type = "UserExistsNot"
-    value = "peneskin"
+    user = "peneskin"
 
 [[check]] 
     message = "User Has Been Removed" 
     points = -5 
     [[check.pass]]
     type = "UserExistsNot"
-    value = "marisan"
+    user = "marisan"
 
 [[check]]
     message = "Forensics Question Deleted" 
