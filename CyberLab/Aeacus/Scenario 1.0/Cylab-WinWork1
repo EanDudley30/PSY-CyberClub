@@ -145,11 +145,7 @@ local = true
     points = 5 
     [[check.pass]]
     type = "RegistryKey"
-    key = "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services
-    value = "1" 
-    [[check.passoverride]]
-    type = "RegistryKey"
-    key = "HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-TCP"
+    key = "HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-TCP\\UserAuthentication"
     value = "1"
 
 [[check]]
