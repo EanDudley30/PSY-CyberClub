@@ -1,0 +1,18 @@
+Question: What is the output of the following code (Provide Answer in Decimal)?
+
+Section .data
+	extern printf
+	global main
+fmt: 
+	db "%d", 10, 0
+main:
+mov rax, 0xa 
+mov rbx, 0x3e8
+add rax, rbx
+push rax
+push fmt
+call printf
+mov eax, 1
+int 0x80
+
+Answer: 
