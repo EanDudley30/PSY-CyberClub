@@ -136,11 +136,11 @@ local = true
     group = "Remote Desktop Users" 
 
 [[check]]
-    message = "Removed Unauthorized JPG"
+    message = "Removed Unauthorized PNG"
     points = 3 
     [[check.pass]]
     type = "PathExistsNot"
-    path = "C:\Users\robsull\Desktop\hiddeninformation.jpg" 
+    path = "C:\Users\robsull\Desktop\hiddeninformation.png" 
 
 [[check]]
     message = "Removed Unncessary Software VNC
