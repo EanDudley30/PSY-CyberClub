@@ -23,7 +23,7 @@ local = true
     points = 3 
     [[check.pass]]
     type = "RegistryKey"
-    key = "HKLM\SOFTWARE\Polices\Microsoft\Windows\WindowsUpdate\AU\NoAutoUpdate"
+    key = "HKLM\\SOFTWARE\\Polices\\Microsoft\\Windows\\WindowsUpdate\\AU\\NoAutoUpdate"
     value = "0"
 
 [[check]]
@@ -137,7 +137,7 @@ local = true
     points = 5
     [[check.pass]]
     type = "RegistryKey"
-    key = "HKLM\SOFTWARE\Polices\Microsoft\Windows NT\Terminal Services\fEncryptRPCTraffic"
+    key = "HKLM\\SOFTWARE\\Polices\\Microsoft\\Windows NT\\Terminal Services\\fEncryptRPCTraffic"
     value = "1"
 
 [[check]]
@@ -145,11 +145,11 @@ local = true
     points = 5 
     [[check.pass]]
     type = "RegistryKey"
-    key = "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+    key = "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services
     value = "1" 
     [[check.passoverride]]
     type = "RegistryKey"
-    key = "HKLM\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-TCP"
+    key = "HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-TCP"
     value = "1"
 
 [[check]]
@@ -164,21 +164,21 @@ local = true
     points = 3 
     [[check.pass]]
     type = "PathExistsNot"
-    path = "C:\Users\robsull\Documents\NotRansomware.docm"
+    path = "C:\\Users\\Robin O'Sullivan\\Documents\\NotRansomware.docm"
 
 [[check]]
     message = "PuTty Has Been Deleted" 
     points = 3 
     [[check.pass]] 
     type = "PathExistsNot" 
-    path = "C:\Users\robsull\Desktop\Putty.exe" 
+    path = "C:\\Users\\Robin O'Sullivan\\Desktop\\Putty.exe" 
 
 [[check]]
     message = "Foresncis Question 1 Correct" 
     points = 8 
     [[check.pass]]
     type = "FileContains"
-    path = "C:\Users\robsull\Desktop\Forensics1.txt" 
+    path = "C:\\Users\Robin O'Sullivan\\Desktop\\Forensics1.txt" 
     value = "Answer: 53" 
 
 [[check]]
@@ -186,7 +186,7 @@ local = true
     points = 8 
     [[check.pass]]
     type = "FileContains" 
-    path = "C:\Users\robsull\Desktop\Forensics2.txt" 
+    path = "C:\\Users\\Robin O'Sullivan\\Desktop\\Forensics2.txt" 
     value = "Answer: ca64f0d8dd787c180dd04c2455d7c2e2"
 
 
@@ -266,11 +266,11 @@ local = true
     points -5
     [[check.pass]]
     type = "PathExistsNot"
-    path = "C:\Users\robsull\Desktop\Forensics1.txt" 
+    path = "C:\\Users\Robin O'Sullivan\\Desktop\\Forensics1.txt" 
 
 [[check]]
     message = "Forensics Question 2 Deleted"
     points = -5 
     [[check.pass]] 
     type = "PathExistsNot"
-    path = "C:\Users\robsull\Dekstop\Forensics2.txt"
+    path = "C:\\Users\Robin O'Sullivan\\Dekstop\\Forensics2.txt"
