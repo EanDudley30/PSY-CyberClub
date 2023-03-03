@@ -166,8 +166,8 @@ local = true
     message = "PuTty Has Been Deleted" 
     points = 3 
     [[check.pass]] 
-    type = "PathExistsNot" 
-    path = "C:\\Users\\Robin O'Sullivan\\Desktop\\Putty.exe" 
+    type = "ProgramInstalledNot" 
+    value = "PuTTY" 
 
 [[check]]
     message = "Foresncis Question 1 Correct" 
