@@ -144,7 +144,7 @@ local = true
     points = 3 
     [[check.pass]] 
     type = "PathExistsNot"
-    path = "C:\Users\robsull\Downloads\morty.mp4" 
+    path = "C:\\Users\Robin O'Sullivan\\Downloads\\morty.mp4" 
 
 [[check]]
     message = "SMB Server Files are encrypted" 
@@ -167,7 +167,7 @@ local = true
     points = 3 
     [[check.pass]]
     type = "RegistryKey"
-    key = "HKLM\SOFTWARE\Polices\Microsoft\Windows\WindowsUpdate\AU\NoAutoUpdate"
+    key = "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\\NoAutoUpdate"
     value = "0"
 
 [[check]]
@@ -175,7 +175,7 @@ local = true
     points = 8 
     [[check.pass]] 
     type = "FileContains"
-    path = "C:\Users\robsull\Desktop\Forensics1.txt"
+    path = "C:\\Users\\Robin O'Sullivan\\Desktop\\Forensics1.txt"
     value = "Answer:1010"
 
 [[check]]
@@ -183,7 +183,7 @@ local = true
     points = 8 
     [[check.pass]]
     type = "FileContains"
-    path = "C:\Users\robsull\Desktop\Forensics2.txt"
+    path = "C:\\Users\\Robin O'Sullivan\\Desktop\\Forensics2.txt"
     value = "Answer: Task Scheduler" 
 
 #Penalties 
@@ -192,7 +192,7 @@ local = true
     points = -5 
     [[check.pass]]
     type = "UserExistsNot" 
-    value = "robsull"
+    value = "Robin O'Sullivan"
 
 [[check]]
     message = "Administrator Has Been Removed"
@@ -256,11 +256,11 @@ local = true
     points -5
     [[check.pass]]
     type = "PathExistsNot"
-    path = "C:\Users\robsull\Desktop\Forensics1.txt" 
+    path = "C:\\Users\\Robin O'Sullivan\\Desktop\\Forensics1.txt" 
 
 [[check]] 
     message = "Forensics Question 2 Deleted"
     points = -5 
     [[check.pass]] 
     type = "PathExistsNot"
-    path = "C:\Users\robsull\Dekstop\Forensics2.txt"
+    path = "C:\\Users\\Robin O'Sullivan\\Dekstop\\Forensics2.txt"
