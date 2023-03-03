@@ -152,7 +152,7 @@ local = true
     [[check.pass]] 
     type = "CommandOutput" 
     cmd = "Get-SmbServerConfiguration | Select EncryptData"
-    value = "EncryptData\n-----------\n   False"
+    value = "EncryptData\n-----------\n   True"
 
 [[check]] 
     message = "SMB Server Configuration Rejects Unencrypted Access" 
