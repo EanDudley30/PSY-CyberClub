@@ -164,7 +164,7 @@ local = true
     [[check.pass]]
     type = "FileContains"
     path = "/etc/apache2/conf-enabled/security.conf"
-    value = "ServerSignature off"
+    value = "ServerSignature Off"
 
 [[check]] 
     message = "Apache Does Not Expose Server In Headers"
@@ -172,7 +172,7 @@ local = true
     [[check.pass]]
     type = "FileContains" 
     path = "/etc/apache2/conf-enabled/security.conf" 
-    value = "ServerTokens prod"
+    value = "ServerTokens Prod"
 
 [[check]]
     message = "PHP Does Not Expose Version"
@@ -180,7 +180,7 @@ local = true
     [[check.pass]]
     type = "FileContains" 
     path = "/etc/php/7.0/apache2/php.ini"
-    value = "expose_php = off" 
+    value = "expose_php = Off" 
 
 [[check]]
     message = "PHP Does not allow remote code execution"
@@ -188,7 +188,7 @@ local = true
     [[check.pass]] 
     type = "FileContains" 
     path = "/etc/php/7.0/apache2/php.ini"
-    value = "allow_url_f_open = off"
+    value = "allow_url_fopen = off"
 
 [[check]] 
     message = "PHP Backdoor Has Been Removed" 
