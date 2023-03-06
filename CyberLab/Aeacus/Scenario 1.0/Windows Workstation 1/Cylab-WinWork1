@@ -23,7 +23,7 @@ local = true
     points = 3 
     [[check.pass]]
     type = "RegistryKey"
-    key = "HKLM\\SOFTWARE\\Polices\\Microsoft\\Windows\\WindowsUpdate\\AU\\NoAutoUpdate"
+    key = "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\\NoAutoUpdate"
     value = "0"
 
 [[check]]
@@ -235,13 +235,6 @@ local = true
     [[check.pass]]
     type = "UserExistsNot"
     value = "rosaray"
-
-[[check]] 
-    message = "User Has Been Removed" 
-    points = -5 
-    [[check.pass]]
-    type = "UserExistsNot"
-    value = "peneskin"
 
 [[check]] 
     message = "User Has Been Removed" 
