@@ -34,6 +34,7 @@ Calum Morton (calmort)
 <b>Authorized Users:</b>
 Shawn Ali (shaali)
 Rosa Raymond (rosaray)
+Alam Welch (alamwelc)
 Penelope Skinner (peneskin)
 Mari Santos (marisan)
 </pre> 
