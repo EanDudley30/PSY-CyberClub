@@ -137,7 +137,7 @@ local = true
     points = 5
     [[check.pass]]
     type = "RegistryKey"
-    key = "HKLM\\SOFTWARE\\Polices\\Microsoft\\Windows NT\\Terminal Services\\fEncryptRPCTraffic"
+    key = "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services\\fEncryptRPCTraffic"
     value = "1"
 
 [[check]]
