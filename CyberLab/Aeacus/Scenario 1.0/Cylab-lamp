@@ -80,7 +80,7 @@ local = true
     [[check.pass]] 
     type = "FileContains" 
     path = "/etc/login.defs" 
-    value = "PASS_MAX_DAYS=60" 
+    value = "PASS_MAX_DAYS  60" 
 
 [[check]]
     message = "/etc/shadow is Not World Readable"
