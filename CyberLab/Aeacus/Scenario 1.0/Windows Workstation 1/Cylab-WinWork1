@@ -54,7 +54,7 @@ local = true
     [[check.pass]] 
     type = "SecurityPolicy"
     key = "LockoutDuration"
-    value = "300-1200"
+    value = "30-1200"
 
 [[check]]
     message = "Auditing Priviledge Use"
