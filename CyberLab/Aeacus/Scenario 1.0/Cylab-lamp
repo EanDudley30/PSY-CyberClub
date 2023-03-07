@@ -188,7 +188,7 @@ local = true
     [[check.pass]] 
     type = "FileContains" 
     path = "/etc/php/7.0/apache2/php.ini"
-    value = "allow_url_fopen = off"
+    value = "allow_url_fopen = Off"
 
 [[check]] 
     message = "PHP Backdoor Has Been Removed" 
@@ -209,7 +209,7 @@ local = true
     [[check.pass]] 
     type = "FileContains"
     path = "/home/robsull/Desktop/Forensics Question 1.odt"
-    value = "Port: 80"
+    value = "Answer: 80"
 
 
 #Penalties 
